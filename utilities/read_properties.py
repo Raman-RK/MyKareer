@@ -10,9 +10,9 @@ class ReadConfig:
         self.config.read(self.config_file_path, encoding='utf-8')
 
     def get_application_url(self):
-        url = self.config.get('common info', 'baseURL')
-        print(url)
-        return url
+        dev_url = self.config.get('dev urls', 'baseURL')
+        print(dev_url)
+        return dev_url
 
     def get_number(self):
         number = self.config.get('credentials', 'number')
