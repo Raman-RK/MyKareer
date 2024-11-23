@@ -1,57 +1,28 @@
-import os
-import time
 import pytest
 from selenium import webdriver
-import subprocess
-import selenium
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager  # This will help manage chromedriver automatically
 
 
 @pytest.fixture(scope="session")
 def setup(request):
     """
     Fixture to set up a WebDriver instance for browser automation testing.
-
-    Args:
-        request (pytest.FixtureRequest): Provides access to configuration information.
-
-    Returns:
-        WebDriver: Instance of the WebDriver (in this case, Chrome).
     """
-
+    # Set Chrome options if needed
     options = webdriver.ChromeOptions()
-    driver = webdriver.Chrome(options=options)
-    driver.implicitly_wait(10)
+    # Optionally, you can add more options here, e.g., options.add_argument("--headless")
 
-    def teardown():
-        driver.quit()
+    # Use webdriver_manager to automatically download and install chromedriver
+    chromedriver_path = ChromeDriverManager().install()
 
-    request.addfinalizer(teardown)
+    # Set up the Service object with the chromedriver path
+    service = Service(chromedriver_path)
+
+    # Initialize the Chrome WebDriver with the service and options
+    driver = webdriver.Chrome(service=service, options=options)
+
+    # Set up WebDriver to use throughout the test session
+    request.addfinalizer(driver.quit)  # Ensure driver quits after the test session
+
     return driver
-
-
-@pytest.fixture(scope="module", autouse=True)
-def screen_recorder():
-    output_dir = os.path.join(os.path.dirname(__file__), "recordings")
-    os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, "C://Users//Kajal//Desktop//Fonu//output.MP4")
-    # Define the ffmpeg command
-    ffmpeg_cmd = [
-        'ffmpeg',
-        '-f', 'gdigrab',  # Screen grab (on Windows, use 'x11grab' on Linux)
-        '-framerate', '30',  # Frames per second
-        '-i', 'desktop',  # Input source (use ':0.0' on Linux)
-        '-q:v', '10',  # Quality level (lower number is higher quality)
-        'output.mp4',  # Output file
-        output_file
-    ]
-
-    # Start the ffmpeg process
-    ffmpeg_process = subprocess.Popen(ffmpeg_cmd)
-
-    # Allow ffmpeg to start
-    time.sleep(2)
-
-    yield
-
-    # Stop the ffmpeg process
-    ffmpeg_process.terminate()

@@ -3,7 +3,7 @@ import string
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from utilities.read_properties import ReadConfig
+from utilities.read_properties import *
 
 
 class Base:
@@ -46,8 +46,8 @@ class Base:
 
 
 class CommonClass:
-    config_reader1 = ReadConfig()
-    baseURL = config_reader1.get_application_url()
+    config_reader_url = Urls()
+    baseURL = config_reader_url.get_live_main_url()
 
     def __init__(self, driver):
         self.driver = driver

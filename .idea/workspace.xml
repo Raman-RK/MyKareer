@@ -4,126 +4,94 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0025392b-2e12-46df-9d3c-b4af44d67b77" name="Changes" comment="&quot;changes&quot;" />
+    <list default="true" id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/login/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyKareer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/data/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/helpers/base_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/helpers/conf_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/requirements.text" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/test_runner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/utilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/utilities/customlogger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyKareer/utilities/read_properties.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/conf_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/conf_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing_page/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing_page/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/read_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/read_properties.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Raman-RK"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Raman-RK/MyKareer.git",
-    "accountId": "9a1c34d5-8c3f-4d8b-adac-8bdf38554ec2"
-  }
-}]]></component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2p6xT6iqvxYo1scDR40E9sFgeri" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectId" id="2pEwnvzyI3WvDxJryQWf4WNHwYP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/hp/PycharmProjects/MyKareer",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sarab/Downloads/MyKareer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hp\PycharmProjects\MyKareer" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sarab\Downloads\MyKareer\utilities" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="pytest for test_login.TestLogIn.test_mentor_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_mentor_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
-      </set>
-    </attachedChunks>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_mentor_login" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0025392b-2e12-46df-9d3c-b4af44d67b77" name="Changes" comment="" />
-      <created>1732100331020</created>
+      <changelist id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="" />
+      <created>1732344713516</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1732100331020</updated>
+      <updated>1732344713516</updated>
     </task>
-    <task id="LOCAL-00001" summary="&quot;changes&quot;">
-      <option name="closed" value="true" />
-      <created>1732253809130</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1732253809130</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;changes&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;changes&quot;" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -4,7 +4,7 @@ faq_xpath = "//*[contains(@class, 'text--black nav-link cursor--pointer') and co
 plans_xpath = "//*[contains(@class, 'text--black nav-link cursor--pointer') and contains(., 'Plans')]"
 mode_css = '[class="text--grey nav-link cursor--pointer"]'
 signup_css = '.d-flex.align-items-center.gap-3 #signup'  # first element
-login_id = "#login"  # first element
+login_css = '[id="signup"]+[class="btn gap-1 btn--primary "]'  # first element
 cover_image_css = '[class="w-100 overflow-hidden"]'
 open_events_img_css = '[class="w-100 overflow-hidden object-fit-cover mb-3"]'
 

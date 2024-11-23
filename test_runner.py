@@ -3,7 +3,7 @@ import pytest
 
 
 def test_run():
-    test_login = os.path.join(os.path.dirname(__file__), 'login/test.py')
+    test_login = os.path.join(os.path.dirname(__file__), 'login/test_login.py')
     # test_teams_path = os.path.join(os.path.dirname(__file__), 'team/test_teams.py')
     # test_member_path = os.path.join(os.path.dirname(__file__), 'member/member_test.py')
     allure_results_path = os.path.join(os.path.dirname(__file__), 'allure-results')
