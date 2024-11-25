@@ -5,14 +5,9 @@ class CredentialManager:
     def __init__(self, config_file='config.ini'):
         # Initialize the config parser and load the config file
         self.config = configparser.ConfigParser()
-        self.config.read(r'C:\Users\sarab\Downloads\MyKareer\data\config.ini')
+        self.config.read(r'C:\Users\sarab\Downloads\MyKareer\data\config.ini')  # Pass config_file as a parameter
 
     def get_email(self, role):
-        """
-        Get the email for a specific role.
-        :param role: The role name (e.g., 'superadmin', 'admin')
-        :return: The email as a string.
-        """
         try:
             email_key = f"{role}_email"
             return self.config.get('credentials live', email_key)
@@ -21,11 +16,6 @@ class CredentialManager:
             return None
 
     def get_password(self, role):
-        """
-        Get the password for a specific role.
-        :param role: The role name (e.g., 'superadmin', 'admin')
-        :return: The password as a string.
-        """
         try:
             password_key = f"{role}_password"
             return self.config.get('credentials live', password_key)
@@ -33,28 +23,49 @@ class CredentialManager:
             print(f"Error: {e}")
             return None
 
-    def get_url(self, environment, target):
-        """
-        Get the URL for a specific environment and target.
-        :param environment: The environment section ('dev urls' or 'live urls')
-        :param target: The target name (e.g., 'baseURL', 'higherInstitution')
-        :return: The URL as a string.
-        """
+    def get_other_data(self, section, key):
         try:
-            return self.config.get(environment, target)
+            return self.config.get(section, key)
         except (configparser.NoSectionError, configparser.NoOptionError) as e:
             print(f"Error: {e}")
             return None
 
-    def get_other_data(self, section, key):
-        """
-        Get data from any section and key in the config file.
-        :param section: The section name in the config file.
-        :param key: The key name in the section.
-        :return: The value associated with the key.
-        """
+
+class Urls:
+    def __init__(self, config_file='config.ini'):
+        self.config = configparser.ConfigParser()  # Corrected the import
+        self.config.read(config_file)
+
+    def get_base_url(self, environment='dev'):
         try:
-            return self.config.get(section, key)
+            if environment == 'dev':
+                return self.config.get('dev urls', 'baseURL')
+            elif environment == 'live':
+                return self.config.get('live urls', 'baseURL')
+            # Add more environments as needed
+            return self.config.get('dev urls', 'baseURL')
+        except (configparser.NoSectionError, configparser.NoOptionError) as e:
+            print(f"Error: {e}")
+            return None
+
+    def get_hi_url(self, environment='dev'):
+        try:
+            if environment == 'dev':
+                return self.config.get('dev urls', 'higherInstitution')
+            elif environment == 'live':
+                return self.config.get('live urls', 'higherInstitution')
+            return self.config.get('dev urls', 'higherInstitution')
+        except (configparser.NoSectionError, configparser.NoOptionError) as e:
+            print(f"Error: {e}")
+            return None
+
+    def get_employer_url(self, environment='dev'):
+        try:
+            if environment == 'dev':
+                return self.config.get('dev urls', 'employer')
+            elif environment == 'live':
+                return self.config.get('live urls', 'employer')
+            return self.config.get('dev urls', 'employer')
         except (configparser.NoSectionError, configparser.NoOptionError) as e:
             print(f"Error: {e}")
             return None

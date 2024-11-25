@@ -5,31 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/login/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyKareer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/data/config.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/helpers/base_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/helpers/conf_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/requirements.text" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/test_runner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/utilities/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/utilities/customlogger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyKareer/utilities/read_properties.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/conf_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/conf_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing_page/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing_page/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/read_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/read_properties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/read_credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/read_credentials.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +42,38 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="pytest for test_login.TestLogIn.test_admin_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="MyKareer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_admin_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_login.TestLogIn.test_member_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="MyKareer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_member_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_login.TestLogIn.test_mentor_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,8 +90,27 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_login.TestLogIn.test_superadmin_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="MyKareer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_superadmin_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_superadmin_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_member_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_mentor_login" />
       </list>
     </recent_temporary>
