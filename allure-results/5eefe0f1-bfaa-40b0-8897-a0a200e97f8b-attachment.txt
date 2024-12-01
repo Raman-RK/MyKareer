@@ -1,3 +1,0 @@
-Element is visible
-https://kareerfinda.com/dashboard
-Admin login test executed successfully
