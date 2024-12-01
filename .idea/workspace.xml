@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dashboard/locators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/read_credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/read_credentials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/read_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/read_properties.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

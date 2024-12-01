@@ -1,5 +1,3 @@
-import time
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from login.page import Login
@@ -10,9 +8,9 @@ from utilities.read_credentials import CredentialManager
 
 class TestLogIn:
     # Reading configuration values for login
-    config_reader_url = Urls()
-    baseURL = config_reader_url.get_dev_main_url()
-    hi_url = config_reader_url.higher_institute_dev_url()
+    config = ConfigManager()
+    baseURL = config.get_base_url()
+    orgURL = config.get_org_url("Higher Institutions", "1")
     credentials_manager = CredentialManager()
 
     @pytest.fixture

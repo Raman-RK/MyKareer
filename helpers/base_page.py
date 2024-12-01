@@ -46,8 +46,8 @@ class Base:
 
 
 class CommonClass:
-    config_reader_url = Urls()
-    baseURL = config_reader_url.get_live_main_url()
+    config = ConfigManager()
+    baseURL = config.get_base_url()
 
     def __init__(self, driver):
         self.driver = driver
