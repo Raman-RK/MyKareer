@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/MyKareer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyKareer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/superadmin_dashboard/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/superadmin_dashboard/locators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
       <recent name="C:\Users\sarab\Downloads\MyKareer\utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_login.TestLogIn.test_hr_recruiter_login">
+  <component name="RunManager">
     <configuration name="pytest for test_login.TestLogIn.test_admin_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,7 +94,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_login.TestLogIn.test_mentor_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_login.TestLogIn.test_staff_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,7 +106,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.TestLogIn.test_mentor_login&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_staff_login&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -126,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_staff_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_hr_recruiter_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_superadmin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_member_login" />
-        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_mentor_login" />
       </list>
     </recent_temporary>
   </component>
