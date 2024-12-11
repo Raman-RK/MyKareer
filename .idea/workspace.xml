@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MyKareer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyKareer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/superadmin_dashboard/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/superadmin_dashboard/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_runner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,10 +130,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_staff_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_hr_recruiter_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_superadmin_login" />
-        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_member_login" />
       </list>
     </recent_temporary>
