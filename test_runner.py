@@ -4,6 +4,7 @@ import subprocess
 
 def test_run():
     test_login = os.path.join(os.path.dirname(__file__), 'login/test_login.py')
+
     allure_results_path = os.path.join(os.path.dirname(__file__), 'allure-results')
 
     # Run the tests

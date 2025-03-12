@@ -1,4 +1,5 @@
 import allure
+from selenium.common import TimeoutException
 from selenium.webdriver import ActionChains
 # import pandas as pd
 from helpers.base_page import *
@@ -31,9 +32,11 @@ class Login(CommonClass):
                 EC.visibility_of_element_located((By.CLASS_NAME, dashboard.login_toast_class))
             )
             self.click_element("CLASS_NAME", dashboard.login_toast_class)
-            print("Element is visible")
-        except:
-            print("Element is not visible")
+            print("Toast element was visible and clicked.")
+        except TimeoutException:
+            print("Toast element was not visible within the timeout period.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
 
     def click_logout(self):  # will write in dashboard page
         self.click_element("XPATH", dashboard.logout_xpath)

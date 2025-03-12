@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_runner.py" afterDir="false" />
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +76,11 @@
       <recent name="C:\Users\sarab\Downloads\MyKareer\utilities" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python tests.pytest for test_login.TestLogIn.test_hi_hr_login">
+=======
+  <component name="RunManager">
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
     <configuration name="pytest for test_login.TestLogIn.test_admin_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
       <option name="ENV_FILES" value="" />
@@ -137,6 +149,25 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration name="pytest for test_login.TestLogIn.test_staff_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="MyKareer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_staff_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
     <configuration name="pytest for test_login.TestLogIn.test_superadmin_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
       <option name="ENV_FILES" value="" />
@@ -156,11 +187,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_hi_hr_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_member_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_superadmin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_lead_advisor_login" />
+=======
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_staff_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_hr_recruiter_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_superadmin_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_member_login" />
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
       </list>
     </recent_temporary>
   </component>

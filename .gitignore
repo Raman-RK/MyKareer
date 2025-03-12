@@ -1,40 +1,33 @@
-# Ignore Python bytecode files
+
 *.pyc
 *.pyo
 __pycache__/
-
-# Ignore virtual environment directories
 venv/
 env/
 .venv/
-
-# Ignore IDE-specific files (e.g., PyCharm, VS Code)
 .idea/
 .vscode/
-
-# Ignore Allure result files
 allure-results/
 allure-report/
-
-#ignore data used
 data/
-
-# Ignore log files
 *.log
-
-# Ignore test reports
+reports/
+logs/
 pytest-report.xml
-
+docker-compose.override.yml
 config.ini
-
-# Ignore environment files
 .env
-
-# Ignore OS-specific files
 .DS_Store
 Thumbs.db
-
-# Ignore compiled files for C extensions (if applicable)
 *.so
 *.dylib
 *.pyd
+.cache/
+.env/
+Pipfile.lock
+poetry.lock
+
+
+
+
+

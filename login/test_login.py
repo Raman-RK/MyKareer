@@ -1,10 +1,11 @@
-
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from login.page import Login
 from utilities.read_properties import ConfigManager
 from helpers.conf_test import *
 from utilities.read_credentials import CredentialManager
+import pytest
+import allure
 
 
 class TestLogIn:
@@ -17,6 +18,9 @@ class TestLogIn:
 
     @pytest.fixture
     def setup_login(self, setup, request):
+        """
+        Fixture to set up login for different user roles.
+        """
         role = request.param  # Access the role passed in parameterized tests
         s_email = self.credentials_manager.get_email(role)
         s_password = self.credentials_manager.get_password(role)
@@ -34,24 +38,114 @@ class TestLogIn:
         driver.get(self.baseURL)
         driver.maximize_window()
 
-        # Log in steps
-        lp.click_login_lp()
-        lp.send_email(s_email)
-        lp.send_password(s_password)
-        lp.click_login()
-        lp.close_success_toast(driver)
+        # Log in steps with Allure steps
+        with allure.step(f"Logging in as {role}"):
+            lp.click_login_lp()
+            lp.send_email(s_email)
+            lp.send_password(s_password)
+            lp.click_login()
+            lp.close_success_toast(driver)
 
         # Verify successful login
-        WebDriverWait(driver, 10).until(EC.url_contains("dashboard"))
-
-        # Assert that "dashboard" is in the current URL
-        assert "dashboard" in driver.current_url, f"Login failed for role: {role}"
+        with allure.step("Verifying login success"):
+            WebDriverWait(driver, 10).until(EC.url_contains("dashboard"))
+            assert "dashboard" in driver.current_url, f"Login failed for role: {role}"
 
         # Add a screenshot to Allure on successful login
         allure.attach(driver.get_screenshot_as_png(), name=f"{role}_login_screenshot",
                       attachment_type=allure.attachment_type.PNG)
 
         return driver, lp
+
+    @pytest.mark.parametrize("setup_login", [
+        "admin", "superadmin", "member_professional_association", "hr_employer",
+        "candidate_employer", "hr_recruiter", "student", "academic_planner",
+        "higher_institution_hr", "staff", "mentor", "advisor", "lead_advisor"
+    ], indirect=True)
+    @pytest.mark.retry(tries=2, delay=2)  # Retry mechanism for flaky tests
+    @allure.severity(allure.severity_level.CRITICAL)
+    def test_login(self, setup_login, request):
+        """
+        Parameterized test for multiple user roles.
+        """
+        role = request.param
+        driver, lp = setup_login
+
+        with allure.step(f"Performing post-login actions for {role}"):
+            print(f"{role} login test executed successfully")
+            lp.click_profile_pic()
+            lp.click_logout()
+            allure.attach(driver.get_screenshot_as_png(), name=f"{role}_logout_screenshot",
+                          attachment_type=allure.attachment_type.PNG)
+
+    def attach_environment_info(self):
+        """
+        Attach environment details to Allure report.
+        """
+        allure.dynamic.environment(
+            Browser="Chrome",
+            Environment="Staging",
+            Version="1.0.0",
+            BaseURL=self.baseURL
+        )
+
+    @pytest.hookimpl
+    def pytest_runtest_teardown(self, item, nextitem):
+        """
+        Capture DOM state on teardown if needed.
+        """
+        driver = getattr(item, 'driver', None)
+        if driver:
+            dom_content = driver.page_source
+            allure.attach(dom_content, name="DOM Snapshot", attachment_type=allure.attachment_type.HTML)
+
+    # from selenium.webdriver.support.ui import WebDriverWait
+    # from selenium.webdriver.support import expected_conditions as EC
+    # from login.page import Login
+    # from utilities.read_properties import ConfigManager
+    # from helpers.conf_test import *
+    # from utilities.read_credentials import CredentialManager
+    #
+    #
+    # class TestLogIn:
+    #     # Reading configuration values for login
+    #     config = ConfigManager()
+    #     baseURL = config.get_base_url()
+    #     orgURL = config.get_org_url("Higher Institutions", "1")
+    #     credentials_manager = CredentialManager()
+    #
+    #     @pytest.fixture
+    #     def setup_login(self, setup, request):
+    #         role = request.param  # Access the role passed in parameterized tests
+    #         s_email = self.credentials_manager.get_email(role)
+    #         s_password = self.credentials_manager.get_password(role)
+    #
+    #         if not s_email or not s_password:
+    #             pytest.fail(f"Missing credentials for role: {role}")
+    #
+    #         driver = setup
+    #         lp = Login(driver)
+    #         driver.get(self.baseURL)
+    #         driver.maximize_window()
+    #
+    #         # Log in steps
+    #         lp.click_login_lp()
+    #         lp.send_email(s_email)
+    #         lp.send_password(s_password)
+    #         lp.click_login()
+    #         lp.close_success_toast(driver)
+    #
+    #         # Verify successful login
+    #         WebDriverWait(driver, 10).until(EC.url_contains("dashboard"))
+    #
+    #         # Assert that "dashboard" is in the current URL
+    #         assert "dashboard" in driver.current_url, f"Login failed for role: {role}"
+    #
+    #         # Add a screenshot to Allure on successful login
+    #         allure.attach(driver.get_screenshot_as_png(), name=f"{role}_login_screenshot",
+    #                       attachment_type=allure.attachment_type.PNG)
+    #
+    #         return driver, lp
 
     @pytest.mark.parametrize("setup_login", ["admin"], indirect=True)
     @allure.story("Admin Login Test")
