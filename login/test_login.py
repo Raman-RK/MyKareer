@@ -12,6 +12,7 @@ class TestLogIn:
     # Reading configuration values for login
     config = ConfigManager()
     baseURL = config.get_base_url()
+    print(f"URL is: {baseURL}")
     orgURL = config.get_org_url("Higher Institutions", "1")
     credentials_manager = CredentialManager()
 
@@ -23,12 +24,17 @@ class TestLogIn:
         role = request.param  # Access the role passed in parameterized tests
         s_email = self.credentials_manager.get_email(role)
         s_password = self.credentials_manager.get_password(role)
+        print(f"Credentials for {role}: {s_email}, {s_password}")
+
 
         if not s_email or not s_password:
+            print(f"Checking credentials for {role}: {s_email}, {s_password}")
             pytest.fail(f"Missing credentials for role: {role}")
+
 
         driver = setup
         lp = Login(driver)
+        print(f"URL is: {self.baseURL}")
         driver.get(self.baseURL)
         driver.maximize_window()
 
@@ -149,6 +155,7 @@ class TestLogIn:
         print("Admin login test executed successfully")
         lp.click_profile_pic()
         lp.click_logout()
+        print("Admin logout test executed successfully")
 
     @pytest.mark.parametrize("setup_login", ["superadmin"], indirect=True)
     @allure.story("Superadmin Login Test")

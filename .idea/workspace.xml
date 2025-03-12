@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47b9336c-f5ae-4f33-ac05-b8a49750567d" name="Changes" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/test_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_runner.py" afterDir="false" />
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +30,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Raman-RK&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Raman-RK/MyKareer.git&quot;,
+    &quot;accountId&quot;: &quot;9a1c34d5-8c3f-4d8b-adac-8bdf38554ec2&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2pEwnvzyI3WvDxJryQWf4WNHwYP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,9 +56,18 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_login.TestLogIn.test_admin_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login.TestLogIn.test_lead_advisor_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login.TestLogIn.test_member_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login.TestLogIn.test_superadmin_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_login.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_runner.py.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sarab/Downloads/MyKareer&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/Desktop/MyKareer&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -47,9 +76,14 @@
       <recent name="C:\Users\sarab\Downloads\MyKareer\utilities" />
     </key>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Python tests.pytest for test_login.TestLogIn.test_hi_hr_login">
+=======
   <component name="RunManager">
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
     <configuration name="pytest for test_login.TestLogIn.test_admin_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -64,8 +98,9 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_login.TestLogIn.test_hr_recruiter_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_login.TestLogIn.test_hi_hr_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -76,12 +111,30 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.TestLogIn.test_hr_recruiter_login&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_hi_hr_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_login.TestLogIn.test_lead_advisor_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="MyKareer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLogIn.test_lead_advisor_login&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest for test_login.TestLogIn.test_member_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -96,6 +149,8 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
     <configuration name="pytest for test_login.TestLogIn.test_staff_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,8 +167,10 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
     <configuration name="pytest for test_login.TestLogIn.test_superadmin_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MyKareer" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -130,13 +187,28 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_hi_hr_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_member_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_superadmin_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
+        <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_lead_advisor_login" />
+=======
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_admin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_staff_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_hr_recruiter_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_superadmin_login" />
         <item itemvalue="Python tests.pytest for test_login.TestLogIn.test_member_login" />
+>>>>>>> 620f08d10643c55b46f7d991b5b2dc234a78f18a
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
