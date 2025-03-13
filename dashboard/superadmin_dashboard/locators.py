@@ -1,7 +1,7 @@
 # New Event
 new_event_xpath = '//span[contains(text(), "New Event")]'
 add_new_event_id = '#exampleModalLabel'
-title_name = "title"
+title_css = '[name="title"]'
 event_start_date_id = "startDate"
 check_all_day_css = '[for="all_day"]'
 start_time_name = "start_time"

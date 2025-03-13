@@ -1,7 +1,5 @@
 import allure
 from selenium.common import TimeoutException
-from selenium.webdriver import ActionChains
-# import pandas as pd
 from helpers.base_page import *
 import login.locators as loc
 import landing_page.locators as landing_page
