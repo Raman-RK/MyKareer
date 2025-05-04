@@ -24,6 +24,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install allure-pytest
+          # Install Allure Commandline (necessary for generating reports)
+          sudo apt-get install allure
 
       - name: Run tests with Allure
         run: |
@@ -34,3 +36,7 @@ jobs:
         with:
           name: allure-results
           path: reports/
+
+      - name: Generate Allure Report (Optional)
+        run: |
+          allure serve reports/  # This will start a local Allure server to view the report
