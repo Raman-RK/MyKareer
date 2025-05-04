@@ -27,7 +27,7 @@ jobs:
 
       - name: Run tests with Allure
         run: |
-          pytest --alluredir=reports/
+          pytest login/test_login.py --alluredir=reports/
 
       - name: Upload Allure results
         uses: actions/upload-artifact@v4
