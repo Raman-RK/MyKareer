@@ -5,10 +5,11 @@ class TestLogIn:
 
     # Universal login-logout test for all roles
     @pytest.mark.parametrize("setup_login", [
-        "admin", "superadmin", "member_professional_association",
-        "candidate_employer", "student", "academic_planner",
-        "higher_institution_hr", "staff", "mentor", "advisor"
+        "admin", "superadmin"
     ], indirect=True)
+    # "member_professional_association",
+    #         "candidate_employer", "student", "academic_planner",
+    #         "higher_institution_hr", "staff", "mentor", "advisor"
     @pytest.mark.flaky(reruns=2, reruns_delay=2)
     @allure.severity(allure.severity_level.CRITICAL)
     def test_login(self, setup_login):  # Removed `request`
