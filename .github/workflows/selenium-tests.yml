@@ -29,12 +29,27 @@ jobs:
         run: |
           pytest login/test_login.py --alluredir=reports/
 
-      - name: Upload Allure results
+      - name: Generate Allure Report
+        if: always()  # Ensures this step runs even if tests fail
+        run: |
+          allure generate reports --clean -o allure-report
+
+      - name: Upload Allure results (raw)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: reports/
-          retention-days: 30 # Optional: specify retention period
+          retention-days: 30
+
+      - name: Upload Allure HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
+          retention-days: 30
+
 
   download-artifacts:
     runs-on: ubuntu-latest
