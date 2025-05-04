@@ -24,13 +24,13 @@ MouseInfo==0.1.3
 mss==9.0.1
 multidict==6.0.4
 namedlist==1.8
-numpy==1.26.3
+numpy==1.26.4
 opencv-python==4.9.0.80
 openpyexcel==2.5.14
 openpyxl==3.1.2
 outcome==1.3.0.post0
 packaging==23.2
-pandas==2.1.4
+pandas==2.2.3
 pillow==10.2.0
 pluggy==1.3.0
 PyAutoGUI==0.9.54
