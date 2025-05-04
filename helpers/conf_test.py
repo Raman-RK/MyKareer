@@ -15,6 +15,13 @@ from login.page import Login  # Make sure this import exists and is correct
 
 # -------- WebDriver Setup Fixture --------
 @pytest.fixture(scope="function")
+import os
+import pytest
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+
+@pytest.fixture(scope="function")
 def setup(request):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -23,12 +30,21 @@ def setup(request):
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
 
-    driver_path = ChromeDriverManager().install()
-    service = Service(driver_path)
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    is_ci = os.getenv("GITHUB_ACTIONS") == "true"
 
-    request.addfinalizer(driver.quit)
-    return driver
+    if is_ci:
+        # Use pre-installed ChromeDriver on GitHub Actions
+        service = Service("/usr/bin/chromedriver")
+    else:
+        # Use WebDriver Manager locally
+        from webdriver_manager.chrome import ChromeDriverManager
+        driver_path = ChromeDriverManager().install()
+        service = Service(driver_path)
+
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    request.cls.driver = driver
+    yield driver
+    driver.quit()
 
 
 # -------- Login Fixture --------
