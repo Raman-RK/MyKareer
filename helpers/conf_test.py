@@ -81,4 +81,11 @@ def pytest_runtest_makereport(item, call):
     if rep.when == "call" and rep.failed:
         driver = item.funcargs.get("setup")
         if driver:
-            allure.attach(driver.get_screenshot_as_png(), name="screenshot_on_failure", attachment_type=AttachmentType.PNG)
+            allure.attach(driver.get_screenshot_as_png(), name="screenshot_on_failure",
+                          attachment_type=AttachmentType.PNG)
+
+
+import os
+
+config_path = os.path.join(os.path.dirname(__file__), 'data', 'config.ini')
+print("Config path:", config_path)
