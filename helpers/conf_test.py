@@ -1,25 +1,20 @@
-import pytest
+
 import allure
-from selenium import webdriver
 from allure_commons.types import AttachmentType
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 from helpers.environment_writer import write_allure_environment
 from utilities.read_credentials import CredentialManager
 from utilities.read_properties import ConfigManager
 from login.page import Login  # Make sure this import exists and is correct
-
-
-# -------- WebDriver Setup Fixture --------
-@pytest.fixture(scope="function")
 import os
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+
+
+# -------- WebDriver Setup Fixture --------
 
 @pytest.fixture(scope="function")
 def setup(request):
@@ -31,16 +26,20 @@ def setup(request):
     chrome_options.add_argument("--no-sandbox")
 
     is_ci = os.getenv("GITHUB_ACTIONS") == "true"
+    chromedriver_path = None
 
     if is_ci:
-        # Use pre-installed ChromeDriver on GitHub Actions
-        service = Service("/usr/bin/chromedriver")
+        # Ensure that chromedriver is properly installed in CI environment
+        chromedriver_path = "/usr/bin/chromedriver"  # GitHub Actions default location
+        assert os.path.exists(chromedriver_path), f"Chromedriver not found at {chromedriver_path} in CI"
     else:
         # Use WebDriver Manager locally
         from webdriver_manager.chrome import ChromeDriverManager
-        driver_path = ChromeDriverManager().install()
-        service = Service(driver_path)
-
+        chrome_version = "136.0.7103.49"  # Example Chrome version
+        # chromedriver_path = ChromeDriverManager().install()
+        # chromedriver_path = ChromeDriverManager(version="your_chrome_version").install()
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    service = Service(chromedriver_path)
     driver = webdriver.Chrome(service=service, options=chrome_options)
     request.cls.driver = driver
     yield driver
@@ -100,8 +99,6 @@ def pytest_runtest_makereport(item, call):
             allure.attach(driver.get_screenshot_as_png(), name="screenshot_on_failure",
                           attachment_type=AttachmentType.PNG)
 
-
-import os
 
 config_path = os.path.join(os.path.dirname(__file__), 'data', 'config.ini')
 print("Config path:", config_path)
