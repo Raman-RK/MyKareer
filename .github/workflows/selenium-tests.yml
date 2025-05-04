@@ -25,16 +25,23 @@ jobs:
           pip install -r requirements.txt
           pip install allure-pytest
 
+      - name: Install Allure CLI
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/latest/download/allure-2.27.0.tgz
+          tar -zxvf allure-2.27.0.tgz
+          sudo mv allure-2.27.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+
       - name: Run tests with Allure
         run: |
           pytest login/test_login.py --alluredir=reports/
 
       - name: Generate Allure Report
-        if: always()  # Ensures this step runs even if tests fail
+        if: always()
         run: |
           allure generate reports --clean -o allure-report
 
-      - name: Upload Allure results (raw)
+      - name: Upload Allure raw results
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -42,13 +49,14 @@ jobs:
           path: reports/
           retention-days: 30
 
-      - name: Upload Allure HTML Report
+      - name: Upload Allure HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report/
           retention-days: 30
+
 
 
   download-artifacts:
