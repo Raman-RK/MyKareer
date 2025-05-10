@@ -1,4 +1,4 @@
-name: Python CI with Allure
+name: Python CI with Allure (Py 3.10 compatible)
 
 on:
   push:
@@ -19,15 +19,20 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install pytest-allure-adaptor allure-pytest
+          pip install allure-pytest
 
-      - name: Clean up allure-results directory
+      - name: Clean allure-results
         run: |
-          if [ -e allure-results ]; then
-            rm -rf allure-results
-          fi
+          if [ -e allure-results ]; then rm -rf allure-results; fi
           mkdir -p allure-results
 
-      - name: Run tests with Allure
+      - name: Patch collections for Py 3.10 and run tests
         run: |
+          python compat_collections_patch.py
           pytest --alluredir=allure-results
+
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results/
